@@ -201,7 +201,7 @@ elseif(SYM STREQUAL "nauty")
 
     # add custom target and library target
     add_custom_target(libnauty_target DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/lib/libnauty.a)
-    add_library(libnauty STATIC IMPORTED)
+    add_library(libnauty UNKNOWN IMPORTED GLOBAL)
     add_dependencies(libnauty libnauty_target)
     set_target_properties(libnauty PROPERTIES
         IMPORTED_LOCATION ${CMAKE_CURRENT_BINARY_DIR}/lib/libnauty.a)
@@ -236,7 +236,7 @@ elseif(SYM STREQUAL "nauty")
 
     # add custom target and library target
     add_custom_target(libnauty_target DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/lib/libnauty.a)
-    add_library(libnauty STATIC IMPORTED)
+    add_library(libnauty UNKNOWN IMPORTED GLOBAL)
     add_dependencies(libnauty libnauty_target)
     set_target_properties(libnauty PROPERTIES
         IMPORTED_LOCATION ${CMAKE_CURRENT_BINARY_DIR}/lib/libnauty.a)
